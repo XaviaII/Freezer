@@ -1,0 +1,3 @@
+[submodule "Freezer/vendor/spdlog"]
+	path = Freezer/vendor/spdlog
+	url = https://github.com/gabime/spdlog

@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Freezer\LogSystem.h" />
     <ClInclude Include="src\Freezer.h" />
     <ClInclude Include="src\Freezer\Application.h" />
     <ClInclude Include="src\Freezer\Core.h" />
     <ClInclude Include="src\Freezer\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Freezer\LogSystem.cpp" />
     <ClCompile Include="src\Freezer\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,6 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>FREEZER_PLATFORM_WINDOWS;FREEZER_BUILD_DLL;FREEZER_BUILD_DLL_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Freezer\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +85,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>FREEZER_PLATFORM_WINDOWS;FREEZER_BUILD_DLL;FREEZER_BUILD_DLLNDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Freezer\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

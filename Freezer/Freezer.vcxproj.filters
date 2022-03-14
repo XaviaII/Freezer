@@ -27,9 +27,15 @@
     <ClInclude Include="src\Freezer\EntryPoint.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezer\LogSystem.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Freezer\LogSystem.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
