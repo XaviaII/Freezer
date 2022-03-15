@@ -20,12 +20,16 @@ project "Freezer"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin_int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "Freezerpch.h"
+	pchsource "Freezer/src/Freezerpch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -51,7 +55,7 @@ project "Freezer"
 		defines "FREEZER_RELEASE"
 		optimize "On"
 
-	filter "configurations:DIST"
+	filter "configurations:Dist"
 		defines "FREEZER_DIST"
 		optimize "On"
 
@@ -98,6 +102,6 @@ project "Testing"
 		defines "FREEZER_RELEASE"
 		optimize "On"
 
-	filter "configurations:DIST"
+	filter "configurations:Dist"
 		defines "FREEZER_DIST"
 		optimize "On"

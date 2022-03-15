@@ -4,6 +4,9 @@
     <Filter Include="Freezer">
       <UniqueIdentifier>{78737521-E452-F4BC-ED6A-7F9359C95A1E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Freezer\Events">
+      <UniqueIdentifier>{5C88C768-4856-BB6E-31EA-2B951D5797D3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Freezer.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Freezer\EntryPoint.h">
       <Filter>Freezer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezer\Events\ApplicationEvent.h">
+      <Filter>Freezer\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Freezer\Events\Event.h">
+      <Filter>Freezer\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Freezer\Events\KeyEvent.h">
+      <Filter>Freezer\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Freezer\Events\MouseEvent.h">
+      <Filter>Freezer\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Freezer\LogSystem.h">
       <Filter>Freezer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezerpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Freezer\LogSystem.cpp">
       <Filter>Freezer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Freezerpch.cpp" />
   </ItemGroup>
 </Project>

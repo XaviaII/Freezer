@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	Freezer::Log::Init();
 	FREEZER_CORE_WARN("Initialized Log!");
 	int a = 5;
-	FREEZER_INFO("Hello Var={0}", a);
+	FREEZER_INFO("Hello! Var={0}", a);
 
 	auto app = Freezer::CreateApplication();
 	app->Run();
