@@ -12,6 +12,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Freezer/Core.h"
+#include "Freezer/LogSystem.h"
+
 #ifdef FREEZER_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

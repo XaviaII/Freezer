@@ -1,5 +1,6 @@
 workspace "Freezer"
 	architecture "x64"
+	startproject "Testing"
 
 	configurations {
 		"Debug",
@@ -7,10 +8,13 @@ workspace "Freezer"
 		"Dist"
 	}
 
-
-
-
 outputdir = "%{cfg.buildcfg}_%{cfg.system}_%{cfg.architecture}"
+
+-- Include GLFW
+IncludeDir = {}
+IncludeDir["GLFW"] = "Freezer/vendor/GLFW/include"
+
+include "Freezer/vendor/GLFW"
 
 project "Freezer"
 	location "Freezer"
@@ -30,7 +34,13 @@ project "Freezer"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -43,12 +53,11 @@ project "Freezer"
 			"FREEZER_BUILD_DLL"
 		}
 
-		postbuildcommands {
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Testing")
-		}
-
 	filter "configurations:Debug"
-		defines "FREEZER_DEBUG"
+		defines {
+			"FREEZER_DEBUG",
+			"FREEZER_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
@@ -83,6 +92,10 @@ project "Testing"
 
 	links {
 		"Freezer"
+	}
+	
+	postbuildcommands {
+		("{COPY} ../bin/%{outputdir}/Freezer/* ../bin/%{outputdir}/%{prj.name}/")
 	}
 
 	filter "system:windows"

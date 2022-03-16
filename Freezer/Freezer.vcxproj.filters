@@ -7,6 +7,12 @@
     <Filter Include="Freezer\Events">
       <UniqueIdentifier>{5C88C768-4856-BB6E-31EA-2B951D5797D3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Freezer.h" />
@@ -34,7 +40,13 @@
     <ClInclude Include="src\Freezer\LogSystem.h">
       <Filter>Freezer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezer\Window.h">
+      <Filter>Freezer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Freezerpch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp">
@@ -44,5 +56,8 @@
       <Filter>Freezer</Filter>
     </ClCompile>
     <ClCompile Include="src\Freezerpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
