@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>Freezerpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FREEZER_PLATFORM_WINDOWS;FREEZER_BUILD_DLL;GLFW_INCLUDE_NONE;FREEZER_DEBUG;FREEZER_ENABLE_ASSERTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -100,7 +100,7 @@
       <PrecompiledHeaderFile>Freezerpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FREEZER_PLATFORM_WINDOWS;FREEZER_BUILD_DLL;GLFW_INCLUDE_NONE;FREEZER_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,7 +124,7 @@
       <PrecompiledHeaderFile>Freezerpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FREEZER_PLATFORM_WINDOWS;FREEZER_BUILD_DLL;GLFW_INCLUDE_NONE;FREEZER_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\GLAD\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -151,21 +151,25 @@
     <ClInclude Include="src\Freezer\Events\Event.h" />
     <ClInclude Include="src\Freezer\Events\KeyEvent.h" />
     <ClInclude Include="src\Freezer\Events\MouseEvent.h" />
+    <ClInclude Include="src\Freezer\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Freezer\Layer.h" />
     <ClInclude Include="src\Freezer\LayerStack.h" />
     <ClInclude Include="src\Freezer\LogSystem.h" />
     <ClInclude Include="src\Freezer\Window.h" />
     <ClInclude Include="src\Freezerpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp" />
+    <ClCompile Include="src\Freezer\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Freezer\Layer.cpp" />
     <ClCompile Include="src\Freezer\LayerStack.cpp" />
     <ClCompile Include="src\Freezer\LogSystem.cpp" />
     <ClCompile Include="src\Freezerpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +178,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\GLAD\GLAD.vcxproj">
       <Project>{5D4A857C-4981-860D-F26D-6C10DE83020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

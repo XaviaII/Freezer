@@ -7,8 +7,14 @@
     <Filter Include="Freezer\Events">
       <UniqueIdentifier>{5C88C768-4856-BB6E-31EA-2B951D5797D3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Freezer\ImGui">
+      <UniqueIdentifier>{A2A2D496-0E63-50CD-D79D-994A431D95A9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Freezer\Events\MouseEvent.h">
       <Filter>Freezer\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezer\ImGui\ImGuiLayer.h">
+      <Filter>Freezer\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Freezer\Layer.h">
       <Filter>Freezer</Filter>
     </ClInclude>
@@ -50,6 +59,9 @@
       <Filter>Freezer</Filter>
     </ClInclude>
     <ClInclude Include="src\Freezerpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -57,6 +69,9 @@
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp">
       <Filter>Freezer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Freezer\ImGui\ImGuiLayer.cpp">
+      <Filter>Freezer\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Freezer\Layer.cpp">
       <Filter>Freezer</Filter>
@@ -68,6 +83,9 @@
       <Filter>Freezer</Filter>
     </ClCompile>
     <ClCompile Include="src\Freezerpch.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>

@@ -19,6 +19,7 @@ class Testing : public Freezer::Application {
 public:
 	Testing() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Freezer::ImGuiLayer());
 	}
 
 	~Testing() {
