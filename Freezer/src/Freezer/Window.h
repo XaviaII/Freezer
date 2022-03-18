@@ -2,7 +2,6 @@
 
 #include "Freezerpch.h"
 
-#include "Freezer/Core.h"
 #include "Freezer/Events/Event.h"
 
 namespace Freezer {

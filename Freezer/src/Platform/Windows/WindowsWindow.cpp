@@ -5,6 +5,8 @@
 #include "Freezer/Events/MouseEvent.h"
 #include "Freezer/Events/ApplicationEvent.h"
 
+#include <glad/glad.h>
+
 namespace Freezer {
 	static bool s_GLFWInitialized = false;
 
@@ -40,6 +42,9 @@ namespace Freezer {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		// Init GLAD
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		FREEZER_CORE_ASSERT(status, "Faild to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

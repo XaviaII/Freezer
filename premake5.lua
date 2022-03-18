@@ -10,11 +10,13 @@ workspace "Freezer"
 
 outputdir = "%{cfg.buildcfg}_%{cfg.system}_%{cfg.architecture}"
 
--- Include GLFW
+-- Include GLFW and GLAD
 IncludeDir = {}
 IncludeDir["GLFW"] = "Freezer/vendor/GLFW/include"
+IncludeDir["GLAD"] = "Freezer/vendor/GLAD/include"
 
 include "Freezer/vendor/GLFW"
+include "Freezer/vendor/GLAD"
 
 project "Freezer"
 	location "Freezer"
@@ -35,11 +37,13 @@ project "Freezer"
 	includedirs {
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
 	}
 
 	links {
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -50,7 +54,8 @@ project "Freezer"
 
 		defines {
 			"FREEZER_PLATFORM_WINDOWS",
-			"FREEZER_BUILD_DLL"
+			"FREEZER_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	filter "configurations:Debug"
