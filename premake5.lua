@@ -58,14 +58,17 @@ project "Freezer"
 			"FREEZER_DEBUG",
 			"FREEZER_ENABLE_ASSERTS"
 		}
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "FREEZER_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "FREEZER_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 
@@ -109,12 +112,15 @@ project "Testing"
 
 	filter "configurations:Debug"
 		defines "FREEZER_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "FREEZER_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "FREEZER_DIST"
+		buildoptions "/MD"
 		optimize "On"

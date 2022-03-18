@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -106,6 +107,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -129,6 +131,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -148,6 +151,8 @@
     <ClInclude Include="src\Freezer\Events\Event.h" />
     <ClInclude Include="src\Freezer\Events\KeyEvent.h" />
     <ClInclude Include="src\Freezer\Events\MouseEvent.h" />
+    <ClInclude Include="src\Freezer\Layer.h" />
+    <ClInclude Include="src\Freezer\LayerStack.h" />
     <ClInclude Include="src\Freezer\LogSystem.h" />
     <ClInclude Include="src\Freezer\Window.h" />
     <ClInclude Include="src\Freezerpch.h" />
@@ -155,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp" />
+    <ClCompile Include="src\Freezer\Layer.cpp" />
+    <ClCompile Include="src\Freezer\LayerStack.cpp" />
     <ClCompile Include="src\Freezer\LogSystem.cpp" />
     <ClCompile Include="src\Freezerpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

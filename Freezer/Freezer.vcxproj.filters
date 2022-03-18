@@ -37,6 +37,12 @@
     <ClInclude Include="src\Freezer\Events\MouseEvent.h">
       <Filter>Freezer\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Freezer\Layer.h">
+      <Filter>Freezer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Freezer\LayerStack.h">
+      <Filter>Freezer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Freezer\LogSystem.h">
       <Filter>Freezer</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Freezer\Application.cpp">
+      <Filter>Freezer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Freezer\Layer.cpp">
+      <Filter>Freezer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Freezer\LayerStack.cpp">
       <Filter>Freezer</Filter>
     </ClCompile>
     <ClCompile Include="src\Freezer\LogSystem.cpp">

@@ -5,6 +5,7 @@
 // -------------------------------------
 
 #include "Freezer/Application.h"
+#include "Freezer/Layer.h"
 #include "Freezer/LogSystem.h"
 
 // Entry Point -------------------------
